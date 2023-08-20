@@ -9,3 +9,23 @@ for (let index = 1; index <= 100; index++){
 
 }
 console.log("Sum " ,plus ,list);
+
+
+let factNum:number=10;
+
+const factorial=(factNum:number)=>{
+    if (factNum > 0) {
+        let result=1;
+        let index = 1;
+        while (index <= factNum) {
+            result *=index;
+            index ++;
+        }
+        return result;
+    }else{
+        throw new Error("Please enter a positive number");
+
+    }
+}
+let factResult:number=factorial(factNum);
+console.log(factResult);
