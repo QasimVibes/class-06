@@ -1,31 +1,35 @@
-// Write a program sum of all numbers between 1 to 100
-let plus=0;
-let list:number[]=[]
-for (let index = 1; index <= 100; index++){
-    if (index % 2==0) {
-        plus+=index;
-        list.push(index);
-    } 
+// Task # 1 Create a function that takes an array as a parameter. Use while loop calculate and return sum of all number in the array
 
-}
-console.log("Sum " ,plus ,list);
+let num: number[] = [40, 50, 20, 50, 60,80];
 
+const sumAll = (value: number[]) => {
+  let sum = 0;
+  let i = 0;
+  while (i < value.length) {
+    sum += value[i];
+    i++;
+  }
+  return sum;
+};
+let sumNum = sumAll(num);
+console.log(sumNum);
 
-let factNum:number=10;
+// Task # 2 create a function that take a positive integer as a parameter and use a while loop to calculate and return the factorial of that number
 
-const factorial=(factNum:number)=>{
-    if (factNum > 0) {
-        let result=1;
-        let index = 1;
-        while (index <= factNum) {
-            result *=index;
-            index ++;
-        }
-        return result;
-    }else{
-        throw new Error("Please enter a positive number");
+let factNum: number = 15;
 
+const findFact = (num: number) => {
+  if (num > 0) {
+    let factSum: number = 1;
+    let j = 1;
+    while (j <= num) {
+      factSum *= j;
+      j++;
     }
-}
-let factResult:number=factorial(factNum);
+    return factSum;
+  } else {
+    throw new Error("Please enter a Positive");
+  }
+};
+let factResult = findFact(factNum);
 console.log(factResult);
